@@ -1,0 +1,21 @@
+.text-general-style {
+  font-family: 'Courier New', Courier, monospace;
+    color: rgb(21, 21, 21);
+}
+
+.title-1 {
+  font-size: 36px;
+  font-weight: 600;
+}
+
+.title-2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: aliceblue;
+}
+
+.title-3 {
+  font-size: 18px;
+  font-weight: 400;
+  color: aliceblue;
+}

@@ -1,0 +1,15 @@
+.pokemonData {
+  width: 160px;
+  height: 80px;
+  background-color: rgb(156, 169, 228);
+  border-radius: 6px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.pokemonData > * {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

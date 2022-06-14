@@ -1,0 +1,40 @@
+section {
+  width: max-content;
+  height: max-content;
+  background-color: #eba8ef;
+  border-radius: 5px;
+  margin: 10px 20px;
+  padding:24px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.fire {
+  background-color: darkorange;
+}
+
+.water {
+  background-color: cornflowerblue;
+}
+
+.grass {
+  background-color: aquamarine;
+}
+
+.bug {
+  background-color: darkslateblue;
+}
+
+.normal {
+  background-color: mediumpurple;
+}
+
+.ground {
+  background-color: rgb(145, 101, 80);
+}
+
+.poison {
+  background-color: #6e6791;
+}

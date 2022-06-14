@@ -1,10 +1,17 @@
 import "./App.css";
 import { useState } from "react";
 import Axios from "axios";
+import { Text }  from "./componentes/Atomos/Text.js"
+import { PokemonData } from "./componentes/Moleculas/PokemonData.js";
+import { Imagen } from "./componentes/Atomos/Imagen";
+import { PokemonCard } from "./componentes/Organismos/PokemonCard";
+
 
 function App() {
   const [pokemonName, setPokemonName] = useState("");
   const [pokemonChosen, setpokemonChosen] = useState(false);
+  const [isValid, setIsValid] = useState(true);
+
   const [pokemon, setpokemon] = useState({
     name: "",
     img: "",
@@ -15,7 +22,7 @@ function App() {
   //Función para hacer la búsqueda del pokemón
   const searchPokemon = () => {
     //Request o petición
-    Axios.get(`https://pokeapi.co/api/v2/pokemon/${ pokemonName }`).then(
+/*     Axios.get(`https://pokeapi.co/api/v2/pokemon/${ pokemonName }`).then(
       (response) => {
         setpokemon({
           name: pokemonName,
@@ -25,28 +32,23 @@ function App() {
         });
         setpokemonChosen(true);
       }
-    );
+    ); */
+    setIsValid (!isValid)
   }
 
   return (
-    <div className="App">
-      <div className="TitleSection">
-        <h1> Pokemón app </h1>
-        <input type="text" onChange={(e) => { setPokemonName(e.target.value)}}></input>
-        <button onClick={searchPokemon}> Buscar </button>
-      </div>
+    <div className="app">
+      <h1> Pokemedex </h1>
+      {/* <Text variant={ isValid ? 'title-1':'title-2'} > palabra </Text> */}
+      {/* <Text variant="title-2">palabra</Text> */}
+      <section className="contenido">
+        <PokemonCard></PokemonCard>
+        <PokemonCard></PokemonCard> 
+        <PokemonCard></PokemonCard>
+      </section>
 
-      <div className="DisplaySection"> {!pokemonChosen ? <h1> Elije un pokemon </h1> : (
-        <>
-          <h1>{pokemon.name}</h1>
-          <img src={ pokemon.img }/>
-          <h1>Species: {pokemon.hp} </h1>
-        </>
-      ) }
-      </div>
     </div>
   );
 }
 
 export default App;
-// Qué es esta parte???
